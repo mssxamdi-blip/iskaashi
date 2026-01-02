@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madasheena - Hal Abuur</title>
+    <style>
+        /* ---------- Reset & Body ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ---------- Header ---------- */
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 20px 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------- Hero Section ---------- */
+        .hero {
+            background-color: #e0f0ff;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a.button {
+            padding: 12px 25px;
+            background-color: #0077cc;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .hero a.button:hover {
+            background-color: #0055aa;
+        }
+
+        /* ---------- Services Section ---------- */
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 50px 20px;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            margin: 10px;
+            border-radius: 10px;
+            flex: 1 1 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #0077cc;
+        }
+
+        /* ---------- Forms Section ---------- */
+        .forms {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 50px 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            flex: 1 1 300px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #0077cc;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0055aa;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            background-color: #0077cc;
+            color: white;
+            text-align: center;
+            padding: 20px 40px;
+            margin-top: 50px;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media(max-width: 768px) {
+            .services, .forms {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Madasheena</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#forms">Login/Sign Up</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Ku soo dhawoow madasheena</h2>
+        <p>Waxaan idiin qabanaynaa shaqooyin kala duwan sida dharkaris, harqaan, iyo cunto karin</p>
+        <a href="#forms" class="button">Ku biir hadda</a>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="service-card">
+            <h3>Dharkaris</h3>
+            <p>Shaqo tayo leh oo dharkaaga lagu diyaariyo si xirfad leh.</p>
+        </div>
+        <div class="service-card">
+            <h3>Harqaan</h3>
+            <p>Qalab harqaan oo tayo leh iyo adeeg degdeg ah.</p>
+        </div>
+        <div class="service-card">
+            <h3>Cunto karin</h3>
+            <p>Cunto macaan oo la diyaariyo si xirfad iyo nadaafad leh.</p>
+        </div>
+    </section>
+
+    <!-- Forms -->
+    <section class="forms" id="forms">
+        <!-- Login Form -->
+        <div class="form-container">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+
+        <!-- Sign-up Form -->
+        <div class="form-container">
+            <h2>Sign Up</h2>
+            <form action="#" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2026 Madasheena. Dhamaan xuquuqda way dhowranyihiin.</p>
+        <p>Email: mssxamdi@gmail.com | Phone: +252 612133035</p>
+    </footer>
+
+</body>
+</html>
